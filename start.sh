@@ -1,7 +1,9 @@
 #!/bin/bash
 
-#tmux new -d -s dualshock ros2 launch teleop_twist_joy teleop-launch.py joy_config:=ps5 stamped:=true
-tmux new -d -s dualshock bash -ilc 'ros2 launch /home/pi/ros2_ws_roomba/launch/teleop-launch.py'
+##tmux new -d -s dualshock ros2 launch teleop_twist_joy teleop-launch.py joy_config:=ps5 stamped:=true
+
+
+tmux new -d -s dualshock bash -ilc 'ros2 launch /home/pi/ros2_ws_roomba/launch/teleop-launch.py config_filepath:=/home/pi/ros2_ws/config/ps5.config.yaml'
 tmux new -d -s rplidar bash -ilc 'ros2 launch /home/pi/ros2_ws/launch/rplidar.launch.py'
 tmux new -d -s lidar_odom bash -ilc 'cd ~/ros2_ws && source install/setup.bash && ros2 launch /home/pi/ros2_ws/launch/rf2o_laser_odometry.launch.py'
 
