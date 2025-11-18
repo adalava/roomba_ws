@@ -1,0 +1,9 @@
+[submodule "src/create_robot"]
+	path = src/create_robot
+	url = https://github.com/slgrobotics/create_robot
+[submodule "src/libcreate"]
+	path = src/libcreate
+	url = https://github.com/slgrobotics/libcreate.git
+[submodule "src/rf2o_laser_odometry"]
+	path = src/rf2o_laser_odometry
+	url = git@github.com:adalava/rf2o_laser_odometry.git
