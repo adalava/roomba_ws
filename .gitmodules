@@ -7,3 +7,6 @@
 [submodule "src/rf2o_laser_odometry"]
 	path = src/rf2o_laser_odometry
 	url = git@github.com:adalava/rf2o_laser_odometry.git
+[submodule "src/rosboard"]
+	path = src/rosboard
+	url = https://github.com/dheera/rosboard.git
