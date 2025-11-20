@@ -67,6 +67,7 @@ bt_navigator:
 
 controller_server:
   ros__parameters:
+    enable_stamped_cmd_vel: true
     controller_frequency: 20.0
     costmap_update_timeout: 0.30
     min_x_velocity_threshold: 0.001
@@ -341,6 +342,7 @@ smoother_server:
 
 behavior_server:
   ros__parameters:
+    enable_stamped_cmd_vel: true
     local_costmap_topic: local_costmap/costmap_raw
     global_costmap_topic: global_costmap/costmap_raw
     local_footprint_topic: local_costmap/published_footprint
@@ -402,6 +404,7 @@ route_server:
 
 velocity_smoother:
   ros__parameters:
+    enable_stamped_cmd_vel: true
     smoothing_frequency: 20.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
@@ -409,13 +412,14 @@ velocity_smoother:
     min_velocity: [-0.5, 0.0, -2.0]
     max_accel: [2.5, 0.0, 3.2]
     max_decel: [-2.5, 0.0, -3.2]
-    odom_topic: "myRobot/odom"
+    odom_topic: "/odom"
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]
     velocity_timeout: 1.0
 
 collision_monitor:
   ros__parameters:
+    enable_stamped_cmd_vel: true
     base_frame_id: "base_footprint"
     odom_frame_id: "odom"
     cmd_vel_in_topic: "cmd_vel_smoothed"
@@ -447,6 +451,7 @@ collision_monitor:
 
 docking_server:
   ros__parameters:
+    enable_stamped_cmd_vel: true
     controller_frequency: 50.0
     initial_perception_timeout: 5.0
     wait_charge_timeout: 5.0
@@ -493,7 +498,7 @@ docking_server:
       use_collision_detection: true
       costmap_topic: "local_costmap/costmap_raw"
       footprint_topic: "local_costmap/published_footprint"
-      transform_tolerance: 0.1
+      transform_tolerance: 0.25
       projection_time: 5.0
       simulation_step: 0.1
       dock_collision_threshold: 0.3

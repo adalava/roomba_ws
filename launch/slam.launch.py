@@ -35,7 +35,7 @@ def generate_launch_description():
                 ])
             ]),
             launch_arguments={
-                'slam_params_file': '/home/pi/ros2_ws/config/mapper_params_online_async.yaml'
+                'slam_params_file': 'config/mapper_params_online_async.yaml'
             }.items()
         )
     ])
