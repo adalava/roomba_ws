@@ -5,7 +5,7 @@ PWD=$(pwd)
 cd ~/roomba_ws
 
 tmux new -d -s roomba bash -ilc 'source install/setup.bash && ros2 launch launch/create_2.launch'
-tmux new -d -s dualshock bash -ilc "ros2 launch launch/teleop-launch.py config_filepath:=${PWD}/config/ps5.config.yaml"
+#tmux new -d -s dualshock bash -ilc "ros2 launch launch/teleop-launch.py config_filepath:=${PWD}/config/ps5.config.yaml"
 tmux new -d -s rplidar bash -ilc 'ros2 launch launch/rplidar.launch.py'
 tmux new -d -s lidar_odom bash -ilc 'source install/setup.bash && ros2 launch launch/rf2o_laser_odometry.launch.py'
 
