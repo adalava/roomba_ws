@@ -1,0 +1,13 @@
+enable_color: false
+rgb_camera.profile: 640x480x6
+enable_depth: true
+align_depth.enable: true
+enable_sync: false
+publish_tf: true
+tf_publish_rate: 1.0
+camera_namespace: L515
+depth_module.profile: 640x480x30
+pointcloud.enable: true
+enable_gyro:  true
+enable_accel: true 
+accel_fps: 100

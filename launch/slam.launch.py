@@ -7,8 +7,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution
 
 def generate_launch_description():  
-#    remappings = [
-#          ('/myRobot/cmd_vel', '/cmd_vel')]
+    remappings = [
+          ('/odometry/filtered', '/odom')]
     
     return LaunchDescription([
         #Node(
@@ -35,7 +35,8 @@ def generate_launch_description():
                 ])
             ]),
             launch_arguments={
-                'slam_params_file': 'config/mapper_params_online_async.yaml'
+                'slam_params_file': 'config/mapper_params_online_async.yaml',
+                'remap': '/odometry/filtered:=/odom'
             }.items()
         )
     ])

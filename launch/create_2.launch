@@ -7,7 +7,8 @@
     <param from="$(var config)" />
     <param name="robot_model" value="CREATE_2" />
 
-	  <!-- <remap from="/odom" to="/odom_roomba" /> -->
+    <remap from="/odom" to="/odom_roomba" />
+	  <!-- <remap from="/cmd_vel" to="/cmd_vel_smoothed" /> -->
   </node>
 
   <!-- Robot description -->

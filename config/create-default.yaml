@@ -10,7 +10,8 @@ create_driver:
     base_frame: "base_footprint"
 
     # Odometry frame ID
-    odom_frame: "odom_roomba"
+    #odom_frame: "odom_roomba"
+    odom_frame: "odom"
 
     # Time (s) without receiving a velocity command before stopping the robot
     latch_cmd_duration: 0.5

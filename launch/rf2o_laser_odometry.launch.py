@@ -16,25 +16,6 @@ def generate_launch_description():
 
     return LaunchDescription([
             Node(
-                package='tf2_ros',
-                executable='static_transform_publisher',
-                arguments=[
-                    '--x', '0.06', '--y', '0.0', '--z', '0.16',
-                    '--yaw', '0.0', '--pitch', '0.0', '--roll',
-                    '0.0', '--frame-id', 'base_footprint', '--child-frame-id', 'laser']
-            ),
-
-            Node(
-                package='tf2_ros',
-                executable='static_transform_publisher',
-                arguments=[
-                    '--x', '0.0', '--y', '0.0', '--z', '0.0',
-                    '--yaw', '0.0', '--pitch', '0.0', '--roll',
-                    '0.0', '--frame-id', 'odom', '--child-frame-id', 'base_footprint']
-            ),
-
-
-            Node(
                 package='rf2o_laser_odometry',
                 executable='rf2o_laser_odometry_node',
                 name='rf2o_laser_odometry',
@@ -44,6 +25,7 @@ def generate_launch_description():
                     'odom_topic' : '/odom',
                     'publish_tf' : True,
                     'base_frame_id' : 'base_footprint',
+                    #'odom_frame_id' : 'odom_lidar',
                     'odom_frame_id' : 'odom',
                     'init_pose_from_topic' : '',
                     'freq' : 10.0}],
